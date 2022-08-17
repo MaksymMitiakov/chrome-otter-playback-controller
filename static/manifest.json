@@ -1,0 +1,34 @@
+{
+	"manifest_version": 2,
+	"name": "Otter Playback Controller",
+	"version": "1.0.0",
+	"description": "Otter website audio playback controller",
+	"permissions": [
+		"activeTab",
+		"tabCapture",
+		"tabs",
+		"declarativeContent",
+		"<all_urls>"
+	],
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"https://otter.ai/*"
+			],
+			"js": [
+				"contentScript.js"
+			]
+		}
+	],
+	"icons": {
+		"512": "icon.png"
+	}
+}

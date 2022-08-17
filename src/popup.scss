@@ -1,0 +1,138 @@
+.tab .buttons {
+	width: 300px;
+}
+
+.play-pause {
+	float: left;
+	margin-top: 5px;
+	border: 0;
+	background: transparent;
+	box-sizing: border-box;
+	width: 0;
+	height: 20px;
+
+	border-color: transparent transparent transparent #202020;
+	transition: 100ms all ease;
+	cursor: pointer;
+
+	border-style: solid;
+	border-width: 10px 0 10px 18px;
+}
+
+.play-pause.paused {
+	border-style: double;
+	border-width: 0px 0 0px 18px;
+}
+
+.play-pause:hover {
+	border-color: transparent transparent transparent #404040;
+}
+
+.toggle-sound {
+	position: relative;
+	float: right;
+	background-color: white;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: black;
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 99;
+}
+
+.toggle-sound.sound-mute {
+	box-shadow: none;
+}
+
+.sound {
+	width: 97%;
+	height: 100%;
+	position: absolute;
+	cursor: pointer;
+	display: inline-block;
+	left: 0;
+	top: 0;
+	/*margin-left: -15%;*/
+}
+
+.sound--icon {
+	color: inherit;
+	line-height: inherit;
+	font-size: 1.6rem;
+	display: block;
+	margin: auto;
+	text-align: left;
+	padding-left: 13px;
+}
+
+.sound--wave {
+	position: absolute;
+	border: 2px solid transparent;
+	border-right: 2px solid black;
+	border-radius: 50%;
+	transition: all 200ms;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.sound--wave_one {
+	width: 45%;
+	height: 40%;
+}
+
+.sound--wave_two {
+	width: 70%;
+	height: 62%;
+}
+
+.sound-mute .sound--wave {
+	border-radius: 0;
+	width: 35%;
+	height: 35%;
+	border-width: 0 2px 0 0;
+	left: 5px;
+}
+
+.sound-mute .sound--wave_one {
+	-webkit-transform: rotate(45deg) translate3d(0, -50%, 0);
+	transform: rotate(45deg) translate3d(0, -50%, 0);
+}
+
+.sound-mute .sound--wave_two {
+	-webkit-transform: rotate(-45deg) translate3d(0, 50%, 0);
+	transform: rotate(-45deg) translate3d(0, 50%, 0);
+}
+
+.volume-down,
+.volume-up {
+	float: right;
+	position: relative;
+	width: 40px;
+	height: 20px;
+	margin-top: 7px;
+}
+
+.volume-down .sound div,
+.volume-up .sound div {
+	float: left;
+}
+
+.sound-down,
+.sound-up {
+	margin-left: 5px;
+	margin-top: 3px;
+}
+
+.slidecontainer {
+	clear: both;
+	width: 300px;
+}
+
+.slidecontainer input {
+	width: 100%;
+}
